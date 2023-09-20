@@ -1,0 +1,206 @@
+img {
+  max-width: 100px;
+  height: auto;
+  float: left;
+  margin: 20px;
+}
+
+.top h4 {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", Arial, sans-serif;
+  background-image: url("image/Artboard\ 1.2.png")
+}
+
+
+#app {
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 20px;
+  place-items: right;
+  display: grid;
+  background-color: #faedcd;
+  border-radius: 7.5px;
+  box-shadow: -3.5px 3.5px 6px rgba(0, 0, 0, 0.227);
+  align-self: right;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#userInput {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1.5px 1.5px 10px rgba(0, 0, 0, 0.174);
+  color: rgb(254, 250, 224);
+}
+
+.btn {
+  background-color: #d4a373;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: rgb(182, 129, 75);
+  color: black;
+}
+
+#advice-btn{
+  background-color: #d4a373d8;
+  font-size: 20px;
+  animation: mymove 6s ease-in 3s infinite;
+}
+
+#welcome-message {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  font-weight: bold;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+td:last-child {
+  text-align: center;
+}
+
+.dropdown{
+  width: 130px;
+  position: relative;
+  margin-right: 4px;
+}
+
+.dropdown_select, #dropdown_items:hover{
+  cursor: pointer;
+}
+
+.dropdown_select, #dropdown_items{
+  background-color: rgb(250, 237, 205);
+  padding: 10px;
+  border: none;
+  font-size: 15px;
+  margin: 4px;
+}
+
+.option{
+  background-color: rgb(250, 237, 205);
+  padding: 10px;
+  border: none;
+  font-size: 15px;
+  margin: 4px;
+  background: transparent;
+}
+
+#dropdown_items{
+  margin: 0;
+  position: relative;
+  right: 0;
+  width: 100%;
+}
+
+#sdg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.sdg img {
+  max-width: 100px;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+.gpa-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.gpa-section button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  background-color: rgb(212, 163, 115);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gpa-section p {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.gpa-section span {
+  color: #514545;
+  font-size: 24px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.advice-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.advice-section p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.advice-section span {
+  color: #fff;
+  font-size: 20px;
+}

@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", Arial, sans-serif;
+  background-image: url("image/Artboard\ 1.2.png")
+}
+
+img {
+  max-width: 100px;
+  height: auto;
+  float: left;
+  margin: 20px;
+}
+
+.top h4 {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  margin-top: 27px;
+  margin-bottom: 120px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 400px;
+  background-color: rgb(250, 237, 205);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: -3.5px 3.5px 6px rgba(0, 0, 0, 0.227);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.input-group label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: 254, 250, 224;
+}
+
+.login-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(212, 163, 115);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-button a{
+  text-decoration: none;
+}
+
+a{
+  color: #000000;
+}
+
+a:hover{
+  color: rgb(254, 250, 224);
+}
+
+.sdg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60 0 0 0;
+}
+
+.sdg img {
+  max-width: 100px;
+  margin: 10px;
+}

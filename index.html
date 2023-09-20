@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVENANT UNIVERSITY GPA CALCULATOR</title>
+  <link rel="icon" href="image/report-card.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top">
+    <img src="image/logo.png" />
+    <h4>COVENANT UNIVERSITY GPA CALCULATOR</h4>
+  </div>
+
+  <div id="app">
+    <div class="item">
+      <table>
+        <div id="welcome-message"></div>
+        <thead>
+          <tr>
+            <th>S/N</th>
+            <th>COURSE CODE</th>
+            <th>UNIT</th>
+            <th>GRADE</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="course-list">
+          <tr>
+            <td>1</td>
+            <td><input type="text" placeholder="Enter Course Code"></td>
+            <td><input type="text" placeholder="Enter Unit"></td>
+            <td>
+              <div class="dropdown">
+                <div class="dropwown_select">
+                  <select name="dropdown_items" id="dropdown_items">
+                    <option value="selectGrade" selected="selected" class="option" id="selected">Select Grade</option>
+                    <option value="A" class="option">A</option>
+                    <option value="B" class="option">B</option>
+                    <option value="C" class="option">C</option>
+                    <option value="D" class="option">D</option>
+                    <option value="F" class="option">F</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td><button class="btn btn-remove">-</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-add">Add Course</button>
+    </div>
+
+    <div class="gpa-section">
+      <button class="btn btn-calculate">Calculate</button>
+      <p>Your GPA is <span id="gpa"></span></p>
+
+      <div class="btn-container">
+        <button class="btn" id="advice-btn">How to improve your GPA =></button>
+      </div>
+      <div class="btn-container">
+        <div id="report-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sdg">
+    <img src="image/SDG7.jpg" alt="SDG7">
+    <img src="image/SDG1.jpg" alt="SDG1">
+    <img src="image/SDG13.jpg" alt="SDG13">
+    <img src="image/SDG16.jpg" alt="SDG16">
+    <img src="image/SDG17.jpg" alt="SDG17">
+    <img src="image/SDG2.jpg" alt="SDG2">
+    <img src="image/SDG4.jpg" alt="SDG4">
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
