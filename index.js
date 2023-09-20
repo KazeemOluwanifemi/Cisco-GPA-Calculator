@@ -9,7 +9,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
       alert('Please fill in all the required fields.');
     } else {
       localStorage.setItem('name', nameInput);
-      window.location.href = 'index.html';
+      window.location.href = 'home.html';
     }
   });
   
