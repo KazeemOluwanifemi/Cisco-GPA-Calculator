@@ -1,4 +1,12 @@
 window.onload = function () {
+  // Check if there is existing course data in local storage
+  const existingCourseData = localStorage.getItem('courseData');
+  if (existingCourseData) {
+    // If data exists, parse it and initialize the course list with it
+    const courseData = JSON.parse(existingCourseData);
+    initializeCourseList(courseData);
+  }
+
   const addCourseButton = document.querySelector('.btn-add');
   addCourseButton.addEventListener('click', () => {
     const courseList = document.getElementById('course-list');
@@ -12,7 +20,7 @@ window.onload = function () {
 
       <td>
         <div class="dropdown">
-          <div class="dropwown_select">
+          <div class="dropdown_select">
             <select name="dropdown_items" id="dropdown_items">
               <option value="selectGrade" selected="selected" class="option" id="selected">Select Grade</option>
               <option value="A" class="option">A</option>
@@ -52,7 +60,6 @@ window.onload = function () {
         totalUnit += unit;
         totalGradePoints += calculateGradePoints(grade) * unit;
       }
-      
     });
 
     const gpa = (totalGradePoints / totalUnit).toFixed(2);
@@ -122,6 +129,9 @@ window.onload = function () {
       }
     });
 
+    // Store the course data in local storage
+    localStorage.setItem('courseData', JSON.stringify(courses));
+
     const reportData = {
       courses: courses,
       gpa: document.getElementById('gpa').textContent
@@ -135,6 +145,38 @@ window.onload = function () {
     const rows = document.querySelectorAll('#course-list tr');
     rows.forEach((row, index) => {
       row.firstElementChild.textContent = index + 1;
+    });
+  }
+
+  // Function to initialize the course list
+  function initializeCourseList(courseData) {
+    const courseList = document.getElementById('course-list');
+    courseList.innerHTML = ''; // Clear the existing course list
+
+    courseData.forEach((course, index) => {
+      const row = courseList.insertRow(index);
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td><input type="text" value="${course.courseCode}" placeholder="Enter Course Code"></td>
+        <td><input type="text" value="${course.unit}" placeholder="Enter Unit"></td>
+        <td>
+          <div class="dropdown">
+            <div class="dropdown_select">
+              <select name="dropdown_items" id="dropdown_items">
+                <option value="selectGrade" selected="selected" class="option" id="selected">Select Grade</option>
+                <option value="A" class="option">A</option>
+                <option value="B" class="option">B</option>
+                <option value="C" class="option">C</option>
+                <option value="D" class="option">D</option>
+                <option value="F" class="option">F</option>
+              </select>
+            </div>
+          </div>
+        </td>
+        <td><button class="btn btn-remove">-</button></td>
+      `;
+      // Set the selected grade for this course (you may need to adjust this)
+      row.querySelector('select').value = course.grade;
     });
   }
 };
