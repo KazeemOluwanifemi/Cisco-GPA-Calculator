@@ -1,8 +1,7 @@
 window.onload = function () {
   const reportData = JSON.parse(localStorage.getItem('reportData'));
   const reportContainer = document.getElementById('report-container');
-  const gpaElement= document.getElementById('gpa');
-  const gpaValue = parseFloat(gpaElement);
+  const gpaElement = document.getElementById('gpa');
 
   if (reportData && reportData.courses.length > 0) {
     const table = document.getElementById('course-table');
@@ -19,8 +18,14 @@ window.onload = function () {
       courseList.appendChild(row);
     });
 
-    
+    // Set the GPA correctly
     gpaElement.textContent = reportData.gpa;
+
+    // Parse the GPA value as a floating-point number
+    const gpaValue = parseFloat(reportData.gpa);
+
+    // Provide advice based on the GPA
+    provideAdvice(gpaValue);
   } else {
     reportContainer.innerHTML = '<p>No courses found</p>';
   }
@@ -37,41 +42,25 @@ window.onload = function () {
     window.print();
   });
 
+  // Function to provide advice based on GPA
+  function provideAdvice(gpa) {
+    const adviceElement = document.getElementById('advice');
 
-  // Check if the GPA value exists
-  if (gpaElement) {
-    // Parse the GPA value as a floating-point number
-    const gpaValue = parseFloat(gpa);
-
-    // Provide advice based on the GPA
-    provideAdvice(gpaValue);
-
-  } else {
-    // GPA value not found in localStorage
-    console.error('GPA value not found.');
+    if (gpa >= 4.50) {
+      adviceElement.textContent = 'Congratulations! You are doing exceptionally well.';
+      adviceElement.classList.add('excellent');
+    } else if (gpa >= 3.50) {
+      adviceElement.textContent = 'Great job! You are on track to achieving academic success. Keep it up!';
+      adviceElement.classList.add('good');
+    } else if (gpa >= 2.50) {
+      adviceElement.textContent = 'You are doing well, but there is still room for improvement. Keep pushing yourself!';
+      adviceElement.classList.add('average');
+    } else if (gpa >= 1.50) {
+      adviceElement.textContent = 'You need to work harder to achieve better results. Consider seeking academic assistance.';
+      adviceElement.classList.add('poor');
+    } else {
+      adviceElement.textContent = 'You are not meeting the minimum requirements for academic success. Seek academic assistance immediately!';
+      adviceElement.classList.add('bad');
+    }
   }
-
-  // Give advice based on GPA value (doesn't work)
-
-function provideAdvice(gpa) {
-  const adviceElement = document.getElementById('advice');
-  const gpaFinal = gpa.toFixed(2);
-
-  if (gpaFinal <= 5.00) {
-    adviceElement.textContent = 'Congratulations! You are doing exceptionally well.';
-    adviceElement.classList.add('excellent');
-  } else if (gpaFinal <= 4.50) {
-    adviceElement.textContent = 'Great job! You are on track to achieving academic success. Keep it up!';
-    adviceElement.classList.add('good');
-  } else if (gpaFinal <= 3.50) {
-    adviceElement.textContent = 'You are doing well, but there is still room for improvement. Keep pushing yourself!';
-    adviceElement.classList.add('average');
-  } else if (gpaFinal <= 2.50) {
-    adviceElement.textContent = 'You need to work harder to achieve better results. Consider seeking academic assistance.';
-    adviceElement.classList.add('poor');
-  } else {
-    adviceElement.textContent = 'You are not meeting the minimum requirements for academic success. Seek academic assistance immediately!';
-    adviceElement.classList.add('bad');
-  }
-}
-
+};
