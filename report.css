@@ -115,3 +115,10 @@ p {
 .btn-print:hover {
   background-color: #bf8756d8;
 }
+
+#advice {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
