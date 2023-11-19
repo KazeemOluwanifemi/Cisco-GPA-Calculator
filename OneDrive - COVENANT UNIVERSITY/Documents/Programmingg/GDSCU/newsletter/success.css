@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+:root{
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+    --tomato: hsl(4, 100%, 67%);
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--charcoal-grey);
+    color: var(--dark-slate-grey);
+    font-family: 'Roboto';
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    box-sizing: content-box;
+    background-color: var(--white);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    border-radius: 30px;
+    padding: 50px 50px 50px 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main h1{
+    font-size: 50px;
+}
+
+.dismiss-button{
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+    padding: 20px;
+    margin: 50px 0px;
+    border-radius: 6px;
+    background-color: var(--dark-slate-grey);
+    font-size: smaller;
+    font-weight: 600;
+}
+
+.dismiss-button:hover{
+    cursor: pointer;
+    background-color: var(--tomato);
+}
+
+/* Code for mobile-view */
+@media screen and (min-width:375px) {
+    .main{
+        height: 100%;
+        width: 100%;
+        border-radius: 0%;
+    }
+
+    .success-message{
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .checkmark img{
+        margin: 0px 0px 0px 0px;
+    }
+
+    .success-message h1{
+        margin: 0px 0px 0px 0px;
+        padding: 0%;
+        font-size: 50px;
+    }
+
+    .success-message p{
+        margin-bottom: 100%;
+    }
+
+    .dismiss-button{
+        margin: 0px 0px 0px 0px;
+    }
+}

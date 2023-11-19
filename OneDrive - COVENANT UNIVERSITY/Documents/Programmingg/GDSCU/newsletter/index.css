@@ -1,0 +1,92 @@
+/* Code for mobile view */
+
+body{
+    /* background-image: url("/img/Desktop\ Wallpaper\ Black\ Aesthetic\ with\ Scripture\ as\ Motivation\ \(1\).png"); */
+    background-color: black;
+    color: white;
+}
+
+
+.main-container{
+    width: 100%;
+}
+
+.story{
+    width: 100%;
+}
+
+.story h1{
+    padding: 0px 5px 5px;
+}
+
+.story p{
+    padding: 0px 5px 5px;
+}
+
+.img-container{
+    width: 100%;
+    padding-top: 5px;
+   
+}
+
+.img-container img{
+    width: 250px;
+    margin: auto;
+    display: block;
+}
+
+
+/* Code for Tablet View */
+
+@media screen and (min-width : 768px) {
+    body{
+        font-size: larger;
+    }
+
+    .main-container{
+        display: flex;
+    }
+
+    .story{
+        width: 50%;
+        padding: 15px 0px 0px 50px;
+    }
+
+    .story h1, h3, p{
+        
+        float: left;
+        text-align: justify;
+        padding: 0px;;
+    }
+
+    .img-container{
+        width: 50%;
+        padding-top: 0px;
+    }
+
+    .img-container img{
+        padding: 175px 50px 0px 0px;
+        width: 250px;
+        vertical-align: middle;
+        float: right;
+    }
+}
+
+/* Code for Laptop view */
+
+@media screen and (min-width : 1000px) {
+    body{
+        font-size: x-large;
+
+    }
+
+    .main-container{
+        width: 100%;
+    }
+
+    .img-container img{
+        padding: 170px 100px 0px 0px;
+        vertical-align: middle;
+        
+    }
+}
