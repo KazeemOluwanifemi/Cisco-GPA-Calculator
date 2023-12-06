@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Report</title>
+  <link rel="icon" href="image/report-card.png" type="image/png">
+  <link rel="stylesheet" href="report.css">
+</head>
+<body>
+  <div class="top">
+    <img src="image/logo.png" alt="Logo">
+    <h4>COVENANT UNIVERSITY GPA CALCULATOR</h4>
+  </div>
+
+  <div id="backBtn_container">
+    <button onclick="history.back()" class="btn-back" id="btnBack">Back</button>
+  </div>
+
+  <div id="report-container">
+    <h2></h2>
+    <table id="course-table">
+      <thead>
+        <tr>
+          <th>S/N</th>
+          <th>COURSE CODE</th>
+          <th>UNIT</th>
+          <th>GRADE</th>
+        </tr>
+      </thead>
+      <tbody id="course-list"></tbody>
+    </table>
+    <p>Your GPA is: <span id="gpa"></span></p>
+  </div>
+
+    <!-- <p id="gpa_display">Your GPA is <span id="gpa"></span></p> -->
+    <p id="advice" > </p>
+    <h2> </h2>
+    <p>
+      
+    </p>
+
+  <button class="btn btn-print">Print</button>
+
+  <script src="report.js"></script>
+</body>
+</html>

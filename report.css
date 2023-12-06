@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("image/Artboard 1.2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top {
+  background-color: #d4a373d8;
+  padding: 5px;
+  text-align: center;
+}
+
+.top img {
+  height: 100px;
+}
+
+.top h4{
+  font-size: x-large;
+  color: white;
+}
+
+#backBtn_container{
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+}
+
+.btn-back{
+  float: left;
+  padding: 10px 15px;
+  margin-right: auto;
+  margin-left: -20px ;
+  font-size: 16px;
+  background-color: #d4a373;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-back:hover {
+  background-color: #bf8756d8;
+}
+
+#report-container {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #d4a373;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.305);
+  border-radius: 5px;
+}
+
+h2 {
+  margin-top: 0;
+  color: rgb(255, 255, 255);
+}
+
+#course-table {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#course-table th,
+#course-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+}
+
+#course-table th {
+  background-color: #f2f2f2;
+}
+
+p {
+  font-size: 24px;
+}
+
+.excellent {
+  color: rgb(0, 0, 0)
+}
+
+.good {
+  color: #27ae60;
+}
+
+.average {
+  color: #f1c40f;
+}
+
+.poor {
+  color: #e67e22;
+}
+
+.bad {
+  color: #e74c3c;
+}
+
+.btn-print {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #d4a373d8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-print:hover {
+  background-color: #bf8756d8;
+}
+
+#advice {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}

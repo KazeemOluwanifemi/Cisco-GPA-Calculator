@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("image/Artboard 1.png");
+  /* background-image: url("image/janko-ferlic-sfL_QOnmy00-unsplash.jpg"); */
+}
+
+.advice {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-image: url("image/janko-ferlic-sfL_QOnmy00-unsplash.jpg"); */
+  /* background-color: rgb(212, 163, 115); */
+  box-shadow: -3.5px -3.5px 6px rgba(41, 41, 41, 0.532);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.link{
+  color: white;
+}
+
+/* #gpa_display{
+  color: white;
+} */
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+}
+
+h2 {
+  font-size: 27px;
+  color: rgb(0, 0, 0);
+}
+
+li{
+  color: rgb(0, 0, 0);
+  font-size: 19px;
+  margin: 10px
+}
+
+/* a{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+} */
+
+.caption{
+  color: black;
+  font-size: 15px;
+}
+
+.picture{
+  max-width: 300px;
+}
+
+
+/* .excellent {
+  color: rgb(0, 0, 0)
+}
+
+.good {
+  color: #27ae60;
+}
+
+.average {
+  color: #f1c40f;
+}
+
+.poor {
+  color: #e67e22;
+}
+
+.bad {
+  color: #e74c3c;
+} */
+
+.btn {
+  background-color: rgb(182, 129, 75);
+  box-shadow: -2.5px 1.5px 3px rgba(0, 0, 0, 0.253);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: rgb(126, 88, 51);
+}
